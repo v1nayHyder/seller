@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Registration Request",
+  "type": "object",
+  "properties": {
+    "personalDetails": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "gender": {
+          "type": "string",
+          "enum": ["M", "F", "O"]
+        },
+        "password": {
+          "type": "string"
+        },
+        "mobile": {
+          "type": "string"
+        },
+        "dob": {
+          "type": "dateType",
+          "format": "date"
+        },
+        "tehsilId": {
+          "type": "string"
+        },
+        "cityId": {
+          "type": "string"
+        },
+        "stateId": {
+          "type": "string"
+        },
+        "districtId": {
+          "type": "string"
+        },
+        "postOffice": {
+          "type": "string"
+        },
+        "photoIdType": {
+          "type": "string",
+          "enum": [
+            "Aadhar",
+            "Pan Card",
+            "Driving License",
+            "Ration Card",
+            "Voter Id",
+            "Passport"
+          ]
+        },
+        "postalCode": {
+          "type": "string"
+        },
+        "photoIdNumber": {
+          "type": "string"
+        },
+        "shortDesc": {
+          "type": "string"
+        },
+        "longDesc": {
+          "type": "string"
+        },
+        "domain": {
+          "type": "string",
+          "default": "ONDC:AGR11"
+        },
+        "gstNumber": {
+          "type": "string"
+        }
+      },
+      "required": ["name", "password", "state", "mobile", "dob", "email"]
+    },
+    "bankDetails": {
+      "type": "object",
+      "properties": {
+        "accountHolderName": {
+          "type": "string"
+        },
+        "accountNo": {
+          "type": "string"
+        },
+        "ifscCode": {
+          "type": "string"
+        },
+        "accountType": {
+          "type": "string",
+          "enum": ["Savings", "Current", "Other"]
+        }
+      },
+      "required": ["accountName", "accountNo", "ifscCode"]
+    }
+  },
+  "required": ["personalDetails", "bankDetails"]
+}

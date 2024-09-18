@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Add Seller Product Request",
+  "type": "object",
+  "properties": {
+    "SellerDetails": {
+    "type": "object",
+      "properties": {
+        "sellerId":{
+          "type": "string"
+               }
+      }
+    },
+    "itemDetails": {
+      "type": "object",
+      "properties": {
+        "commodityId": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "variety": {
+          "type": "string"
+        },
+        "qualitySpecification": {
+          "type": "string"
+        },
+        "quantity": {
+          "type": "integer"
+        },
+        "unit": {
+          "type": "string"
+        },
+        "price": {
+          "type": "string"
+        },
+        "returnWindow": {
+          "type": "string"
+        }
+     }
+    }
+  }
+}

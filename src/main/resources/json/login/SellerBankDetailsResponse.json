@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Bank Detail Response",
+  "type": "object",
+  "properties": {
+    "id": {"type": "integer"},
+    "seller_id": {"type": "integer"},
+    "account_holder_name": {"type": "string"},
+    "account_number": {"type": "string"},
+    "passbook_canceled_cheque_url":  {"type": "string"},
+    "ifsc_code": {"type": "string"},
+    "ifsc_id": {"type": "integer"},
+    "id_proof_url": {"type": "string"},
+    "account_type": {"type": "string"}
+  },
+  "required": [
+    "id",
+    "seller_id",
+    "account_holder_name",
+    "account_number",
+    "ifsc_code"
+  ]
+}

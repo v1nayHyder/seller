@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Seller Location Details",
+  "type": "object",
+  "properties": {
+    "id": { "type": "integer" },
+    "name": { "type": "string" },
+    "seller_id": { "type": "integer" },
+    "is_closed": {"type": "boolean"},
+    "is_active": {"type": "boolean"},
+    "gps": { "type": "string" },
+    "locality": { "type": "string" },
+    "street": { "type": "string" },
+    "city": { "type": "string" },
+    "tensile": {"type": "string"},
+    "district": {"type": "string"},
+    "area_code": { "type": "string" },
+    "state": { "type": "string" },
+    "days": { "type": "string" },
+    "consumer_care_contact_name": { "type": "string" },
+    "consumer_care_email": { "type": "string" },
+    "consumer_care_phone": { "type": "string" },
+    "start_time": { "type": "timeType","format": "time" },
+    "end_time": { "type": "timeType", "format": "time" },
+    "holiday_dates": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "date"
+      }    }
+  },
+  "required": [
+    "name",
+    "seller_id",
+    "street",
+    "locality",
+    "city",
+    "area_code"
+  ]
+}

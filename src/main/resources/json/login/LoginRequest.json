@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Login Request",
+  "type": "object",
+  "properties": {
+    "userId": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string"
+    },
+    "otp": {
+      "type": "string"
+    }
+  },
+  "required": ["userId"]
+}

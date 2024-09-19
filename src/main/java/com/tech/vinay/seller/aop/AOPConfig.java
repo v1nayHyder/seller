@@ -63,6 +63,7 @@ public class AOPConfig {
         System.out.println("method start..."+methodName);
         Object result=proceedingJoinPoint.proceed();
         System.out.println("Class Name..."+proceedingJoinPoint.getClass());
+        System.out.println("data save successfully in DB");
 
         return result;
     }

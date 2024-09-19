@@ -63,8 +63,7 @@ public class AOPConfig {
         System.out.println("-------");
         System.out.println("+++++++++++++++++++++++++++++");
         Object result=proceedingJoinPoint.proceed();
-        System.out.println(result+"------------------------");
-        System.out.println(result+"------------------------");
+
         return result;
     }
 }

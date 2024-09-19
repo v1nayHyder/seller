@@ -61,7 +61,6 @@ public class AOPConfig {
 
         System.out.println("method start..."+methodName);
         System.out.println("-------");
-        System.out.println("+++++++++++++++++++++++++++++");
         Object result=proceedingJoinPoint.proceed();
 
         return result;

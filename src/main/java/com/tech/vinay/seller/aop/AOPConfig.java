@@ -65,6 +65,7 @@ public class AOPConfig {
         System.out.println("I have successfully added ");
 
         System.out.println("add new statement");
+        System.out.println("add new statement");
 
         return result;
     }

@@ -64,6 +64,8 @@ public class AOPConfig {
         Object result=proceedingJoinPoint.proceed();
         System.out.println("I have successfully added ");
 
+        System.out.println("add new statement");
+
         return result;
     }
 }

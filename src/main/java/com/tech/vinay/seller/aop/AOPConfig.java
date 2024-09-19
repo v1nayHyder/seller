@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class AOPConfig {
+
 //
 //    // Executes before any method in UserController
 //    @Before("execution(* com.tech.vinay.seller.controllers.UserController.*(..))")
@@ -60,12 +61,7 @@ public class AOPConfig {
         String methodName = String.valueOf(proceedingJoinPoint.getClass());
 
         System.out.println("method start..."+methodName);
-        System.out.println("-------");
         Object result=proceedingJoinPoint.proceed();
-        System.out.println("I have successfully added ");
-
-        System.out.println("add new statement");
-        System.out.println("add new statement");
 
         return result;
     }

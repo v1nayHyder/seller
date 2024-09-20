@@ -58,9 +58,9 @@ public class AOPConfig {
     }
     @Around("logBeforeAndAfter()")
     public Object Log(ProceedingJoinPoint proceedingJoinPoint) throws Throwable{
-        String methodName = String.valueOf(proceedingJoinPoint.getClass());
+        String methodName = String.valueOf(proceedingJoinPoint.getSignature().getName());
 
-        System.out.println("method start..."+methodName);
+        System.out.println("method start..."+methodName+" "+proceedingJoinPoint.getSignature().getDeclaringTypeName());
         Object result=proceedingJoinPoint.proceed();
         System.out.println("Class Name..."+proceedingJoinPoint.getClass());
         System.out.println("data save successfully in DB");

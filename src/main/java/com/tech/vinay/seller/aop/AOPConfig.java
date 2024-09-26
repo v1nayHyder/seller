@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class AOPConfig {
+
 //
 //    // Executes before any method in UserController
 //    @Before("execution(* com.tech.vinay.seller.controllers.UserController.*(..))")
@@ -57,11 +58,19 @@ public class AOPConfig {
     }
     @Around("logBeforeAndAfter()")
     public Object Log(ProceedingJoinPoint proceedingJoinPoint) throws Throwable{
+        Object result=null;
+        try{
         String methodName = String.valueOf(proceedingJoinPoint.getClass());
 
         System.out.println("method start..."+methodName);
-        Object result=proceedingJoinPoint.proceed();
-        System.out.println(result+"-----------------");
+        result=proceedingJoinPoint.proceed();
+        System.out.println("Class Name..."+proceedingJoinPoint.getClass());
+        System.out.println("data save successfully in DB");
+        }
+        catch(Exception e){
+            throw new RuntimeException("Something went wrong");
+        }
+
         return result;
     }
 }
